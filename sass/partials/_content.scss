@@ -1,6 +1,6 @@
 @use "variables";
 
-.headTitle{
+.headTitle {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -10,26 +10,26 @@
   @include font2(600);
   margin: 20px 0px 0px 0px;
 
-  h2{
+  h2 {
     display: inline-block;
     color: $primaryColor;
-    @include  font1();
+    @include font1();
     font-size: 1.8rem;
   }
-  span{
+  span {
     color: $secondaryColor;
   }
-  a{
+  a {
     text-decoration: none;
     color: $primaryColor;
     padding: 5px 10px 4px 10px;
     border: 1px solid $primaryColor;
     display: inline-block;
     line-height: normal;
-    &:visited{
+    &:visited {
       text-decoration: none;
     }
-    &:hover{
+    &:hover {
       background-color: $primaryColor;
       color: #fff;
       transition: 300ms all;
@@ -39,7 +39,6 @@
       -o-transition: 300ms all;
     }
   }
-
 }
 
 .kutu {
@@ -47,7 +46,7 @@
   padding: 10px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
   margin: 10px 0px;
-  &:hover{
+  &:hover {
     transition: 200ms all;
     transform: scale(1.01);
     -webkit-transform: scale(1.01);
@@ -58,7 +57,7 @@
     -moz-transition: 200ms all;
     -ms-transition: 200ms all;
     -o-transition: 200ms all;
-}
+  }
 
   .thumbnail {
     max-width: 100%;
@@ -73,73 +72,69 @@
       background-size: cover;
       width: 100%;
       min-height: 100%;
-
     }
-    
-}
+  }
 
-h2{
-  @include font1();
-  font-size: 1.5rem;
-  margin: 10px 0px;
-  color: $primaryColor;
-  a{
+  h2 {
+    @include font1();
+    font-size: 1.5rem;
+    margin: 10px 0px;
     color: $primaryColor;
-    text-decoration: none;
-    &:hover{
-      color: $secondaryColor;
-    }
-  }
-
-}
-p{
-  @include font2(400);
-  color: $darkColor;
-  letter-spacing: 0.01rem;
-}
-.kutu-alt {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-  a{
-    text-decoration: none;
-  }
-  .category {
-    padding-left: 20px;
-    @include font2(600);
-    color: $darkColor;
-    font-size: 0.9rem;
-    position: relative;
-    &::before{
-      content: "\f101";
-      font-family: "Font Awesome 6 Free";
-      position: absolute;
-      left: 0;
-    }
-    &:hover{
+    a {
       color: $primaryColor;
-      transition: 300ms all;
-      -webkit-transition: 300ms all;
-      -moz-transition: 300ms all;
-      -ms-transition: 300ms all;
-      -o-transition: 300ms all;
-}
-    
+      text-decoration: none;
+      &:hover {
+        color: $secondaryColor;
+      }
+    }
   }
+  p {
+    @include font2(400);
+    color: $darkColor;
+    letter-spacing: 0.01rem;
+  }
+  .kutu-alt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+    }
+    .category {
+      padding-left: 20px;
+      @include font2(600);
+      color: $darkColor;
+      font-size: 0.9rem;
+      position: relative;
+      &::before {
+        content: "\f101";
+        font-family: "Font Awesome 6 Free";
+        position: absolute;
+        left: 0;
+      }
+      &:hover {
+        color: $primaryColor;
+        transition: 300ms all;
+        -webkit-transition: 300ms all;
+        -moz-transition: 300ms all;
+        -ms-transition: 300ms all;
+        -o-transition: 300ms all;
+      }
+    }
 
-  .readMore{
+    .readMore {
       color: $primaryColor;
       padding: 5px 10px 4px 10px;
       border: 1px solid $primaryColor;
       display: inline-block;
       font-size: 0.9rem;
       font-weight: 600;
-      &:visited{
+      &:visited {
         text-decoration: none;
       }
-      &:hover{
+      &:hover {
         background-color: $primaryColor;
         color: #fff;
         transition: 300ms all;
@@ -148,14 +143,13 @@ p{
         -ms-transition: 300ms all;
         -o-transition: 300ms all;
       }
-    
-
+    }
   }
 }
-}
 
+/** Photo Gallery **/
 
-.photoGallery{
+.photoGallery {
   background-color: $primaryColor;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -164,32 +158,32 @@ p{
   -o-border-radius: 10px;
   margin: 10px 0px 20px 0px;
   overflow: hidden;
- 
 
-.photos{
-  display: grid;
-  grid-template-columns: 4fr 2fr;
-  grid-template-rows: repeat(3,1fr);
-  gap: 20px;
-  padding: 30px;  
+  .photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "pic1 pic1  pic2"
+      "pic1 pic1  pic3"
+      "pic1 pic1 pic4";
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .photo {
+    min-height: 125px;
+    overflow: hidden;
+    position: relative;
+    background-color: #097bb8;
+  }
+  .photo:nth-of-type(1) {
+    grid-area: pic1;
+  }
 }
 
-.photo {
-  min-height: 125px;
-  background-color: red;
-  overflow: hidden;
-}
-.photo:nth-of-type(1){
-  grid-row-start: 1;
-  grid-row-end: 4;
-  height: 420px;
-}
-
-}
-
-
-
-.videoGallery{
+/** Video Gallery **/
+.videoGallery {
   background-color: $secondaryColor;
   min-height: 300px;
   border-radius: 10px;
@@ -198,23 +192,21 @@ p{
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   margin: 10px 0px 20px 0px;
-  
+
   overflow: hidden;
   position: relative;
-  &::after{
+  &::after {
     content: "\f144";
     font-family: "Font Awesome 6 Free";
     position: absolute;
     font-size: 500px;
-    color: #097BB8;
+    color: #097bb8;
     right: -100px;
-    top:-150px;
+    top: -150px;
     transform: rotate(-20deg);
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
     -o-transform: rotate(-20deg);
-
-}
-
+  }
 }
