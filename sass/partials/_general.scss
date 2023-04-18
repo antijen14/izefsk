@@ -1,0 +1,5 @@
+// Genel Ayarlar
+body{
+  background-color: $lightColor;
+  @include font2(400);
+}

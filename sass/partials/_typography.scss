@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;600&family=Rajdhani:wght@600&display=swap');
+
+
+@mixin font1(){
+  font-family: 'Rajdhani', sans-serif;
+}
+
+@mixin font2($type){
+  font-family: 'Krub', sans-serif;
+  font-weight: $type;
+}

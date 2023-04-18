@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Krub:wght@400;600&family=Rajdhani:wght@600&display=swap");
+body {
+  background-color: #EEEEEE;
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+}
+
+.headTitle {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  font-family: "Krub", sans-serif;
+  font-weight: 600;
+  margin: 20px 0px 0px 0px;
+}
+.headTitle h2 {
+  display: inline-block;
+  color: #013D7D;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.8rem;
+}
+.headTitle span {
+  color: #0D84C3;
+}
+.headTitle a {
+  text-decoration: none;
+  color: #013D7D;
+  padding: 5px 10px 4px 10px;
+  border: 1px solid #013D7D;
+  display: inline-block;
+  line-height: normal;
+}
+.headTitle a:visited {
+  text-decoration: none;
+}
+.headTitle a:hover {
+  background-color: #013D7D;
+  color: #fff;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+
+.kutu {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  margin: 10px 0px;
+}
+.kutu:hover {
+  transition: 200ms all;
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  -webkit-transition: 200ms all;
+  -moz-transition: 200ms all;
+  -ms-transition: 200ms all;
+  -o-transition: 200ms all;
+}
+.kutu .thumbnail {
+  max-width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.kutu .thumbnail img {
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+}
+.kutu h2 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5rem;
+  margin: 10px 0px;
+  color: #013D7D;
+}
+.kutu h2 a {
+  color: #013D7D;
+  text-decoration: none;
+}
+.kutu h2 a:hover {
+  color: #0D84C3;
+}
+.kutu p {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+  color: #1D1D1B;
+  letter-spacing: 0.01rem;
+}
+.kutu .kutu-alt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+.kutu .kutu-alt a {
+  text-decoration: none;
+}
+.kutu .kutu-alt .category {
+  padding-left: 20px;
+  font-family: "Krub", sans-serif;
+  font-weight: 600;
+  color: #1D1D1B;
+  font-size: 0.9rem;
+  position: relative;
+}
+.kutu .kutu-alt .category::before {
+  content: "\f101";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  left: 0;
+}
+.kutu .kutu-alt .category:hover {
+  color: #013D7D;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.kutu .kutu-alt .readMore {
+  color: #013D7D;
+  padding: 5px 10px 4px 10px;
+  border: 1px solid #013D7D;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.kutu .kutu-alt .readMore:visited {
+  text-decoration: none;
+}
+.kutu .kutu-alt .readMore:hover {
+  background-color: #013D7D;
+  color: #fff;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+
+.photoGallery {
+  background-color: #013D7D;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 10px 0px 20px 0px;
+  overflow: hidden;
+}
+.photoGallery .photos {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+.photoGallery .photo {
+  min-height: 125px;
+  background-color: red;
+  overflow: hidden;
+}
+.photoGallery .photo:nth-of-type(1) {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  height: 420px;
+}
+
+.videoGallery {
+  background-color: #0D84C3;
+  min-height: 300px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 10px 0px 20px 0px;
+  overflow: hidden;
+  position: relative;
+}
+.videoGallery::after {
+  content: "\f144";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  font-size: 500px;
+  color: #097BB8;
+  right: -100px;
+  top: -150px;
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+}
+
+/** Header **/
+.slider {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: #1D1D1B;
+  padding: 30px 0px;
+  color: #EEEEEE;
+  font-size: 0.9rem;
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+/* Footer */
+@use "variables";
+
+.footer{
+  width: 100%;
+  background-color: $darkColor;
+  padding: 30px 0px;
+  color: $lightColor;
+  font-size: 0.9rem;
+  @include font2(400);
+  
+}
